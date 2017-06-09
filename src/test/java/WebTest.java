@@ -46,7 +46,6 @@ public class WebTest extends AbstractTest {
 
 	@Test
 	public void openWebpageAndTakeScreenshot() throws InterruptedException {
-		Thread.sleep(10000);
 		String url = "http://www.amazon.com";
 		driver.get(url);
 		driver.rotate(ScreenOrientation.LANDSCAPE);
