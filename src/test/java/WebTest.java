@@ -46,8 +46,6 @@ public class WebTest extends AbstractTest {
 
 	@Test
 	public void openWebpageAndTakeScreenshot() throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-
 		Thread.sleep(10000);
 		String url = "http://www.amazon.com";
 		driver.get(url);
