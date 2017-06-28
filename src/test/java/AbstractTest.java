@@ -24,6 +24,8 @@ public abstract class AbstractTest {
 		capabilities.setCapability("testobject_api_key", TESTOBJECT_API_KEY);
 		capabilities.setCapability("testobject_app_id", TESTOBJECT_APP_ID);
 		capabilities.setCapability("testobject_appium_version", TESTOBJECT_APPIUM_VERSION);
+		capabilities.setCapability("privateDevicesOnly", getEnvOrDefault("PRIVATE_DEVICES_ONLY","false"));
+
 		if (AUTOMATION_NAME != null) {
 			capabilities.setCapability("automationName", AUTOMATION_NAME);
 		}
