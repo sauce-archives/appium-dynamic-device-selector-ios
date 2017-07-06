@@ -15,10 +15,12 @@ public class WebTest extends AbstractTest {
 	private static String TESTOBJECT_APP_ID_WEB = getEnvOrDefault("TESTOBJECT_APP_ID_WEB", "1");
 	private static String AUTOMATION_NAME = getEnvOrDefault("AUTOMATION_NAME", null);
 	private static String PLATFORM_VERSION = getEnvOrDefault("PLATFORM_VERSION", null);
+	private static String TESTOBJECT_CACHE_DEVICE = getEnvOrDefault("TESTOBJECT_CACHE_DEVICE", null);
+	private static String TESTOBJECT_APPIUM_VERSION = getEnvOrDefault("TESTOBJECT_APPIUM_VERSION", null);
+	private static String APPIUM_SERVER = getEnvOrFail("APPIUM_SERVER");
 
 	// Credentials differ slightly for the web test so we override setup().
 	@Before
-	@Override
 	public void setup() throws MalformedURLException {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("testobject_api_key", TESTOBJECT_API_KEY_WEB);
